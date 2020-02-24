@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    class CustomList
+    class CustomList<T>
+      int result;  
     {
 
-     public CustomList()
+     public void AddToList(int firstPlace, int secondPlace)
         {
-
-
+        
 
         }
     }
