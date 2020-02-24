@@ -35,7 +35,7 @@ namespace UnitTestProject1
             customList.Add(firstValue);
             //assert
             Assert.AreEqual(expected, customList[1]);
-         
+
         }
         public void CreatedList_AddToList_CheckIndexIncrease()
         {
@@ -55,9 +55,29 @@ namespace UnitTestProject1
             customList.Add(fourthValue);
             customList.Add(fifthValue);
             //assert
-            Assert.AreEqual(expected, customList.Count);
-           
+            Assert.AreEqual(expected, customList.Capacity);
+
         }
+
+        public void CreatedList_AddToList_CheckIndexCap4()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            string firstValue = "4";
+            string secondValue = "pie";
+            string thirdValue = "star";
+            int expected = 4;
+
+            //act
+            customList.Add(firstValue);
+            customList.Add(secondValue);
+            customList.Add(thirdValue);
+
+            //assert
+            Assert.AreEqual(expected, customList.Capacity);
+
+        }
+
         public void CreatedList_AddToList_CheckIndexPosition()
         {
             //arrange
@@ -67,7 +87,7 @@ namespace UnitTestProject1
             string thirdValue = "star";
             string fourthValue = "light";
             string fifthValue = "ham";
-            string expected = "light";
+            string expected = "ham";
 
             //act
             customList.Add(firstValue);
@@ -76,7 +96,7 @@ namespace UnitTestProject1
             customList.Add(fourthValue);
             customList.Add(fifthValue);
             //assert
-            Assert.AreEqual(expected, customList[3]);
+            Assert.AreEqual(expected, customList[5]);
 
         }
     }
