@@ -9,15 +9,31 @@ namespace CustomListProject
     public class CustomList<T> 
     {
         T item;
-        public int Count;
+        int count;
+        int capacity;
+        T[] itemArray;
+
+        CustomList()
+        {
+            capacity = 4;
+            itemArray = new T[capacity];
+
+        }
 
         public void Add(T item)
         {
+            itemArray[0] = item;
+            itemArray[1] = item;
 
-            T[] itemArray = new T[Count];
+ 
+           
 
         }
-        public void CreatedList_AddToList_ValuesCombined()
+
+
+
+
+        public void CreatedList()
         {
             CustomList<string> names = new CustomList<string>{ "Sam", "Pete", "Pat" };
         }
