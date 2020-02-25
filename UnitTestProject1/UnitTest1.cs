@@ -38,47 +38,47 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, customList[1]);
 
         }
+        [TestMethod]
+        public void CreatedList_AddToList_CheckIndexIncrease()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            string firstValue = "4";
+            string secondValue = "pie";
+            string thirdValue = "star";
+            string fourthValue = "light";
+            string fifthValue = "ham";
+            int expected = 8;
 
-        //public void CreatedList_AddToList_CheckIndexIncrease()
-        //{
-        //    //arrange
-        //    CustomList<string> customList = new CustomList<string>();
-        //    string firstValue = "4";
-        //    string secondValue = "pie";
-        //    string thirdValue = "star";
-        //    string fourthValue = "light";
-        //    string fifthValue = "ham";
-        //    int expected = 8;
+            //act
+            customList.Add(firstValue);
+            customList.Add(secondValue);
+            customList.Add(thirdValue);
+            customList.Add(fourthValue);
+            customList.Add(fifthValue);
+            //assert
+            Assert.AreEqual(expected, customList.capacity);
 
-        //    //act
-        //    customList.Add(firstValue);
-        //    customList.Add(secondValue);
-        //    customList.Add(thirdValue);
-        //    customList.Add(fourthValue);
-        //    customList.Add(fifthValue);
-        //    //assert
-        //    Assert.AreEqual(expected, customList.Capacity);
+        }
+        [TestMethod]
+        public void CreatedList_AddToList_CheckIndexCap4()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            string firstValue = "4";
+            string secondValue = "pie";
+            string thirdValue = "star";
+            int expected = 4;
 
-        //}
+            //act
+            customList.Add(firstValue);
+            customList.Add(secondValue);
+            customList.Add(thirdValue);
 
-        //public void CreatedList_AddToList_CheckIndexCap4()
-        //{
-        //    //arrange
-        //    CustomList<string> customList = new CustomList<string>();
-        //    string firstValue = "4";
-        //    string secondValue = "pie";
-        //    string thirdValue = "star";
-        //    int expected = 4;
+            //assert
+            Assert.AreEqual(expected, customList.capacity);
 
-        //    //act
-        //    customList.Add(firstValue);
-        //    customList.Add(secondValue);
-        //    customList.Add(thirdValue);
-
-        //    //assert
-        //    Assert.AreEqual(expected, customList.Capacity);
-
-        //}
+        }
 
         //public void CreatedList_AddToList_CheckIndexPosition()
         //{

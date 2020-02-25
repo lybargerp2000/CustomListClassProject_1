@@ -13,14 +13,28 @@ namespace CustomListProject
         public int capacity;
         T[] itemArray;
         public T item;
+        int capacityValue;
 
         public CustomList()
         {
+
             capacity = 4;
             itemArray = new T[capacity];
  
         }
+        public T this[int index]
+        {
+            get
+            {
+                return itemArray[index];
 
+            }
+            set
+            {
+                itemArray[index] = value;
+            }
+
+        }
 
         public void Add(T item)
         {
@@ -28,20 +42,17 @@ namespace CustomListProject
             count++;
 
         }
+        //public int Capacity(int capacities)
+        //{
+
+        //    for (capacities = 4; capacities >= 4; capacities * 2)
+        //    {
+
+        //    }
+        //}
 
 
-        public T this[int index]
-        {
-            get
-            {
-                return itemArray [index];
-            }
-            set
-            {
-                itemArray[index] = value;
-            }
-            
-        }
+       
 
         //public void CreatedList()
         //{
