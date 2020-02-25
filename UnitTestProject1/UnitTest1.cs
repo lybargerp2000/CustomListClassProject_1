@@ -23,20 +23,22 @@ namespace UnitTestProject1
             //assert
             Assert.AreEqual(expected, customList.count);
         }
-        //public void CreatedList_AddToList_CheckIndex()
-        //{
-        //    //arrange
-        //    CustomList<string> customList = new CustomList<string>();
-        //    string firstValue = "4";
-        //    string expected = "4";
+        [TestMethod]
+        public void CreatedList_AddToList_CheckIndex()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            string firstValue = "4";
+            string expected = "4";
 
-        //    //act
-        //    customList.Add(firstValue);
-        //    customList.Add(firstValue);
-        //    //assert
-        //    Assert.AreEqual(expected, customList[1]);
+            //act
+            customList.Add(firstValue);
+            customList.Add(firstValue);
+            //assert
+            Assert.AreEqual(expected, customList[1]);
 
-        //}
+        }
+
         //public void CreatedList_AddToList_CheckIndexIncrease()
         //{
         //    //arrange

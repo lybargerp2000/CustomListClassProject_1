@@ -10,7 +10,7 @@ namespace CustomListProject
     {
         
         public int count;
-        int capacity;
+        public int capacity;
         T[] itemArray;
         public T item;
 
@@ -18,25 +18,30 @@ namespace CustomListProject
         {
             capacity = 4;
             itemArray = new T[capacity];
-            Add(item);
+ 
         }
+
 
         public void Add(T item)
         {
-            itemArray[count]= item;
-            for (count = 0; count < itemArray.Length; count++)
-            {
-                Console.WriteLine(item);
-            }
-            foreach(T items in itemArray)
-            {
-                Console.WriteLine(items);
-            }
+            itemArray[count] = item;
+            count++;
 
         }
 
 
-
+        public T this[int index]
+        {
+            get
+            {
+                return itemArray [index];
+            }
+            set
+            {
+                itemArray[index] = value;
+            }
+            
+        }
 
         //public void CreatedList()
         //{
