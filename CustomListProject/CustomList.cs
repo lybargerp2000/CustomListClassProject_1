@@ -13,13 +13,16 @@ namespace CustomListProject
         public int capacity;
         T[] itemArray;
         public T item;
+        
      
 
         public CustomList()
         {
-            capacity = 8;
+            capacity = 4;
             //capacity = Capacity(capacity);
             itemArray = new T[capacity];
+            
+            
  
         }
         public T this[int index]
@@ -40,6 +43,7 @@ namespace CustomListProject
         {
             itemArray[count] = item;
             count++;
+            IncreaseCapacity();
 
         }
         public void Remove(T item)
@@ -53,15 +57,22 @@ namespace CustomListProject
         //    capacity = item;
         //    capacity++;
         //}
-        public int Capacity(int item)
+        public void IncreaseCapacity()
         {
-            capacity = item;
-            for (item = 4; item >= 4;)
+            if (count == capacity)
             {
-                item = capacity * 2;
-                
+                capacity = capacity * 2;
+                T[] newArray = new T[capacity];
+                for (int index = 0; index < itemArray.Length; index++)
+                {
+                    newArray[index] = itemArray[index];
+                    Console.WriteLine(newArray[index]);
+                }
+                itemArray = newArray;
             }
-            return item;
+           
+
+
         }
 
 
