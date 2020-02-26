@@ -132,7 +132,7 @@ namespace UnitTestProject1
             customList.Add(secondValue);
             customList.Remove(firstValue);
             //assert
-            Assert.AreEqual(expected, customList[1]);
+            Assert.AreEqual(expected, customList[0]);
 
         }
         [TestMethod]
@@ -168,7 +168,7 @@ namespace UnitTestProject1
             string thirdValue = "star";
             string fourthValue = "light";
             string fifthValue = "ham";
-            int expected = 4;
+            int expected = 8;
 
             //act
             customList.Add(firstValue);
@@ -188,22 +188,17 @@ namespace UnitTestProject1
         {
             //arrange
             CustomList<string> customList = new CustomList<string>();
-            string firstValue = "4";
-            string secondValue = "pie";
-            string thirdValue = "star";
-            string fourthValue = "light";
-            string fifthValue = "ham";
             string expected = "light";
 
             //act
-            customList.Add(firstValue);
-            customList.Add(secondValue);
-            customList.Add(thirdValue);
-            customList.Add(fourthValue);
-            customList.Add(fifthValue);
-            customList.Remove(firstValue);
+            customList.Add("4");
+            customList.Add("light");
+            customList.Add("star");
+            customList.Add("light");
+            customList.Add("ham");
+            customList.Remove("light");
             //assert
-            Assert.AreEqual(expected, customList[3]);
+            Assert.AreEqual(expected, customList[2]);
 
         }
 

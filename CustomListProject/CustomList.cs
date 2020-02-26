@@ -49,6 +49,7 @@ namespace CustomListProject
         public void Remove(T item)
         {
             itemArray[count] = item;
+            
             count--;
             DecreaseCapacity();
         }
@@ -77,7 +78,7 @@ namespace CustomListProject
         }
         public void DecreaseCapacity()
         {
-            if (count <= capacity && count > 5)
+            if (count == capacity)
             {
                 capacity = capacity / 2;
                 T[] newArray = new T[capacity];
