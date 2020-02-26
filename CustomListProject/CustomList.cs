@@ -50,16 +50,23 @@ namespace CustomListProject
         }
         public void Remove(T item)
         {
-            T[] newArraay = new T[capacity];
-           for (int index = 0; index > itemArray.Length; index--)
+            T[] newArray = new T[count];
+            for (int i =0; i < itemArray.Length; i++)
             {
-                newArraay[index] = itemArray[index];
-                Console.WriteLine(newArraay[index]);
+               if(itemArray[i].Equals(item))
+                {
+                    continue;
+                }
+                else
+                {
+                    //Build using created Add method
+                    newArray[i] = itemArray[i];
+                }
+                
+                newArray[i] = itemArray[i];
+                
             }
-            itemArray = newArraay;
-            
-            count--;
-            DecreaseCapacity();
+
         }
         
 
