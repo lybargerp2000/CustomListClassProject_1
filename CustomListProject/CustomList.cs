@@ -13,12 +13,12 @@ namespace CustomListProject
         public int capacity;
         T[] itemArray;
         public T item;
-        int capacityValue;
+     
 
         public CustomList()
         {
 
-            capacity = 4;
+            capacity = Capacity(capacity);
             itemArray = new T[capacity];
  
         }
@@ -27,7 +27,7 @@ namespace CustomListProject
             get
             {
                 return itemArray[index];
-
+                
             }
             set
             {
@@ -42,17 +42,25 @@ namespace CustomListProject
             count++;
 
         }
-        //public int Capacity(int capacities)
+
+        //public void Capacity(int item)
         //{
-
-        //    for (capacities = 4; capacities >= 4; capacities * 2)
-        //    {
-
-        //    }
+        //    capacity = item;
+        //    capacity++;
         //}
+        public int Capacity(int item)
+        {
+            capacity = item;
+            for (item = 4; item >= 4;)
+            {
+                item = capacity * 2;
+                
+            }
+            return item;
+        }
 
 
-       
+
 
         //public void CreatedList()
         //{
