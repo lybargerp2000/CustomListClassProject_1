@@ -11,8 +11,10 @@ namespace CustomListProject
         
         public int count;
         public int capacity;
+        
         T[] itemArray;
         public T item;
+        public T removeItem;
         
      
 
@@ -48,17 +50,19 @@ namespace CustomListProject
         }
         public void Remove(T item)
         {
-            itemArray[count] = item;
+            T[] newArraay = new T[capacity];
+           for (int index = 0; index > itemArray.Length; index--)
+            {
+                newArraay[index] = itemArray[index];
+                Console.WriteLine(newArraay[index]);
+            }
+            itemArray = newArraay;
             
             count--;
             DecreaseCapacity();
         }
+        
 
-        //public void Capacity(int item)
-        //{
-        //    capacity = item;
-        //    capacity++;
-        //}
         public void IncreaseCapacity()
         {
             if (count == capacity)
