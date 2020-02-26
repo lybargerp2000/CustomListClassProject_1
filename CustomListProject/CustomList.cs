@@ -17,8 +17,8 @@ namespace CustomListProject
 
         public CustomList()
         {
-
-            capacity = Capacity(capacity);
+            capacity = 8;
+            //capacity = Capacity(capacity);
             itemArray = new T[capacity];
  
         }
@@ -41,6 +41,11 @@ namespace CustomListProject
             itemArray[count] = item;
             count++;
 
+        }
+        public void Remove(T item)
+        {
+            itemArray[count] = item;
+            count--;
         }
 
         //public void Capacity(int item)
