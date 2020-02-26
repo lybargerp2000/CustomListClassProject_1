@@ -177,6 +177,7 @@ namespace UnitTestProject1
             customList.Add(fourthValue);
             customList.Add(fifthValue);
             customList.Remove(firstValue);
+            customList.Remove(secondValue);
 
             //assert
             Assert.AreEqual(expected, customList.capacity);

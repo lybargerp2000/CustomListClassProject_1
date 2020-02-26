@@ -50,6 +50,7 @@ namespace CustomListProject
         {
             itemArray[count] = item;
             count--;
+            DecreaseCapacity();
         }
 
         //public void Capacity(int item)
@@ -71,6 +72,23 @@ namespace CustomListProject
                 itemArray = newArray;
             }
            
+
+
+        }
+        public void DecreaseCapacity()
+        {
+            if (count <= capacity && count > 5)
+            {
+                capacity = capacity / 2;
+                T[] newArray = new T[capacity];
+                for (int index = 0; index > itemArray.Length; index--)
+                {
+                    newArray[index] = itemArray[index];
+                    Console.WriteLine(newArray[index]);
+                }
+                itemArray = newArray;
+            }
+
 
 
         }
