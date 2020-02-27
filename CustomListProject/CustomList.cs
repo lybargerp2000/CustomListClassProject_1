@@ -62,11 +62,18 @@ namespace CustomListProject
             {
                 if (itemArray[i] == null)
                 {
+                    count--;
+                }
+                if (itemArray[i] == null)
+                {
+
                     break;
+
                 }
                 if (itemArray[i].Equals(item))
                 {
                     isFound = true;
+                    
                     
                 }
                 if(isFound == true)
@@ -82,9 +89,10 @@ namespace CustomListProject
                 }
               
             }
-            itemArray = newArray;
+            //itemArray = newArray;
+            
            
-            DecreaseCapacity();
+            //DecreaseCapacity();
 
         }
         
@@ -108,7 +116,7 @@ namespace CustomListProject
         }
         public void DecreaseCapacity()
         {
-            if (count == capacity && capacity >= 8)
+            if (count == capacity)
             {
                 capacity = capacity / 2;
                 T[] newArray = new T[capacity];
