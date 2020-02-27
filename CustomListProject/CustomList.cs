@@ -61,9 +61,12 @@ namespace CustomListProject
                 {
                     //Build using created Add method
                     newArray[i] = itemArray[i];
+                    Console.WriteLine(itemArray[i]);
                 }
+                itemArray = newArray;
+                DecreaseCapacity();
                 
-                newArray[i] = itemArray[i];
+                
                 
             }
 
