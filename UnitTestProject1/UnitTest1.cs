@@ -201,6 +201,33 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, customList[2]);
 
         }
+        [TestMethod]
+        public void CreateCombinedString_StringIsCombined_CheckResult()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            string firstValue = "How";
+            string secondValue = "are";
+            string expected = "How are";
+            
+            //act
+            customList.ToString(firstValue);
+            customList.ToString(secondValue);
+            //assert
+            Assert.AreEqual(expected, customList[0]);
+        }
+        [TestMethod]
+        public void CreateToString_Combined_CheckIndex1IsEmpty()
+        {
+            //arrange
+            CustomList<string> customList = new CustomList<string>();
+            string expected = null;
+            //act
+            customList.ToString("1");
+            customList.ToString("2");
+            //assert
+            Assert.AreEqual(expected, customList[1]);
+        }
 
 
     }

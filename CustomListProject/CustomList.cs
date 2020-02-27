@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomListProject
 {
-    public class CustomList<T> 
+    public class CustomList<T> : IEnumerable
     {
         
         public int count;
@@ -131,27 +131,10 @@ namespace CustomListProject
 
 
         }
+        public  void ToString(T item)
+        {
+         
+        }
 
-
-
-
-        //public void CreatedList()
-        //{
-        //    CustomList<string> names = new CustomList<string>{ "Sam", "Pete", "Pat" };
-        //}
-
-
-
-        //public void Count()
-        //{
-
-        //}
-        //public void Add(T item)
-        //{
-        //    itemArray[0] = item;
-
-        //    
-
-        //}
     }
 }
