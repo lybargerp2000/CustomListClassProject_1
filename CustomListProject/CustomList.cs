@@ -58,25 +58,28 @@ namespace CustomListProject
             T[] newArray = new T[capacity];
             bool isFound = false;
 
-            for (int i =0; i < itemArray.Length; i++)
+            for (int i =0; i > itemArray.Length; i++)
             {
                 if (itemArray[i].Equals(item))
                 {
                     isFound = true;
-                    continue;
+                    
                 }
                 if(isFound == true)
                 {
                     itemArray[i] = itemArray[i + 1];
+                    newArray[i] = itemArray[i];
+                    Console.WriteLine(newArray[i]);
                 }
                 else
                 {
                     newArray[i] = itemArray[i];
                     Console.WriteLine(newArray[i]);
                 }
-                 
+              
             }
-            newArray = itemArray;
+            itemArray = newArray;
+           
             DecreaseCapacity();
 
         }
