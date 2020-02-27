@@ -58,8 +58,12 @@ namespace CustomListProject
             T[] newArray = new T[capacity];
             bool isFound = false;
 
-            for (int i =0; i > itemArray.Length; i++)
+            for (int i =0; i < itemArray.Length; i++)
             {
+                if (itemArray[i] == null)
+                {
+                    break;
+                }
                 if (itemArray[i].Equals(item))
                 {
                     isFound = true;
@@ -104,7 +108,7 @@ namespace CustomListProject
         }
         public void DecreaseCapacity()
         {
-            if (count == capacity && capacity > 8)
+            if (count == capacity && capacity >= 8)
             {
                 capacity = capacity / 2;
                 T[] newArray = new T[capacity];
