@@ -15,6 +15,7 @@ namespace CustomListProject
         T[] itemArray;
         public T item;
         public T removeItem;
+        public T SItemString;
         public int index;
         
      
@@ -133,7 +134,32 @@ namespace CustomListProject
         }
         public  void ToString(T item)
         {
-         
+            
+            {
+
+            }
+            
+            
+            
+            
+            {
+                SItemString = item;
+                Console.WriteLine(item);
+                
+
+            }
+            
+            //T[] newArray = new T[capacity];
+            //for (int i = 0; index < itemArray.Length; i++)
+            //{
+              
+                
+            //}
+            
+            
+
+
+
         }
 
     }
